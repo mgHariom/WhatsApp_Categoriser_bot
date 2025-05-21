@@ -3,7 +3,7 @@ const qrcode = require('qrcode');
 const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
-const db = require('./firebase'); // Firebase Firestore instance
+// const db = require('./firebase'); // Firebase Firestore instance
 require('dotenv').config();
 
 // Express setup for QR code display
@@ -86,7 +86,7 @@ client.on('message', async (msg) => {
         const formattedMessage = `${senderName}:\n${messageText}`;
 
         // Save the message to Firebase
-        const messageRef = db.collection('messages').doc();
+        // const messageRef = db.collection('messages').doc();
 
         try {
             // Uncomment if you want to save to Firestore
